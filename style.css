@@ -8,6 +8,7 @@
     --main-decor-color:#00eeff;
     --main-header-background: rgba(0, 0, 0, 0.53);
     --main-font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+
 }
 /*----stuff below header----*/
 main{
@@ -251,7 +252,7 @@ hr {
     .burger{
         position:absolute;
         top: 10px;
-        right: 25%;
+        right: 30px;
         display: block;
         cursor:pointer;
         z-index: 5;
