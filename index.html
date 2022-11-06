@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta charset="utf-8">
-  <title>Swoledemort's Crib</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="Images/Favicon.png">
-  <script src="script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>Swoledemort's Crib</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="Images/Favicon.png">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Place favicon.ico in the root directory -->
 </head>
 
 <!-- Main Body -->
 <body>
-<!-- Header -->
+<div class="container">
+    <!-- Header -->
     <header>
-      <nav>
-        <!-- Navigation links in header, each link jumps to a different section of the page -->
-        <ul class = "topHeader">
-          <li><a class = "navLinkActive" href="#section1">Home</a></li>
-          <li><a class = "navLink" href="#section2"></a>Section2</li>
-          <li><a class = "navLink" href="#section3"></a>Section3</li>
-          <li><a class = "navLink" href="#section4"></a>Section4</li>
-        </ul>
-        <!-- Burger in header -->
-        <div class = "burger">
-          <div class = "line1"></div>
-          <div class = "line2"></div>
-          <div class = "line3"></div>
-        </div>
-      </nav>
+        <nav>
+            <!-- Navigation links in header, each link jumps to a different section of the page -->
+            <ul class="topHeader">
+                <li><a class="navLink active" href="#section1">Home</a></li>
+                <li><a class="navLink" href="#section2">Section2</a></li>
+                <li><a class="navLink" href="#section3">Section3</a></li>
+                <li><a class="navLink" href="#section4">Section4</a></li>
+            </ul>
+            <!-- Burger in header -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
     </header>
     <main>
-      <div id="section1">
-          <div class="filter"></div>
-          <section class="intro">
-            <h3>Swoledemort's Crib<hr></h3>
-            <p>Look in wonder at the varying delights</p>
-          </section>
-      </div>
-      <div id="section2">
+        <div id="section1">
+            <div class="filter"></div>
+            <section class="intro">
+                <h3>Swoledemort's Crib
+                    <hr>
+                </h3>
+                <p>Look in wonder at the varying delights</p>
+            </section>
+        </div>
+        <div id="section2">
 
-      </div>
-      <div id="section3">
+        </div>
+        <div id="section3">
 
-      </div>
-      <div id="section4">
+        </div>
+        <div id="section4">
 
-      </div>
+        </div>
     </main>
-  <!-- Google Analytics -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4EX1P1PWB9"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4EX1P1PWB9');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-4EX1P1PWB9');
     </script>
-  </body>
+</div>
+</body>
 </html>
