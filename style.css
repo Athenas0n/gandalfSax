@@ -1,14 +1,25 @@
+:root {
+    --header-neon-horizontal: linear-gradient(to right, rgba(140, 255, 139, 0.4), rgba(139, 255, 193, 0.4), rgba(139, 255, 220, 0.4), rgba(139, 228, 255, 0.4), rgba(139, 211, 255, 0.4) , rgba(151, 139, 255, 0.4), rgba(172, 139, 255, 0.4), rgba(230, 139, 255, 0.4));
+    --header-neon-vertical: linear-gradient(rgba(140, 255, 139, 0.4), rgba(139, 255, 193, 0.4), rgba(139, 255, 220, 0.4), rgba(139, 228, 255, 0.4), rgba(139, 211, 255, 0.4) , rgba(151, 139, 255, 0.4), rgba(172, 139, 255, 0.4), rgba(230, 139, 255, 0.4));
+;
+    --header-font-decor: rgba(65, 255, 193, 0.87);
+    --scrollbar-colour: linear-gradient(red, yellow);
+    --main-background: #0b0c0f;
+    --main-fonts-color: #fff;
+    --main-decor-color: rgb(255, 255, 255);
+    --main-header-background: rgba(0, 0, 0, 0.53);
+    --main-font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+    --section1-colour:linear-gradient(rgba(140, 255, 139, 0.87), rgba(139, 255, 193, 0.87));
+    --section2-colour:linear-gradient(rgba(139, 255, 220, 0.87), rgba(139, 228, 255, 0.87));
+    --section3-colour:linear-gradient(rgba(139, 211, 255, 0.87) , rgba(151, 139, 255, 0.87));
+    --section4-colour:linear-gradient(rgba(172, 139, 255, 0.87), rgba(230, 139, 255, 0.87));
+}
+
 /*----select all elements----*/
 *{
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    --main-background: #0b0c0f;
-    --main-fonts-color: #fff;
-    --main-decor-color:#00eeff;
-    --main-header-background: rgba(0, 0, 0, 0.53);
-    --main-font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
-
 }
 /*----stuff below header----*/
 main{
@@ -29,7 +40,7 @@ header{
     top: 0;
     transition: 0.3s;
     z-index: 5;
-    font-size: 20px ;
+    font-size: 20px
 }
 
 .nav-show{
@@ -41,15 +52,44 @@ header:hover{
     background: var(--main-header-background);
 }
 
+#swole {
+    letter-spacing: normal;
+    font-family: var(--main-font-family);
+    font-style: normal;
+    font-size: 25px;
+    color: var(--main-fonts-color);
+    text-shadow: 0 0 40px var(--main-decor-color);
+    margin: 5px;
+    padding: 1px 5px;
+}
+
+#swole:hover {
+    color: var(--main-background);
+    text-shadow: 0 0 40px red;
+}
+
 /* navigation bar */
 .navbar{
     list-style:none;
     position: relative;
     display: inline-flex;
     margin: 10px;
+    justify-content: space-between;
 }
 
+.navbar #bw{
+    width: 30px;
+    cursor: pointer;
+}
+.navbar #disco{
+    padding-top: 20px;
+    width: 50px;
+    cursor: pointer;
+}
+
+
 a.navLink{
+    border-radius: 10px;
     margin: 5px;
     padding: 5px 5px;
     text-decoration: none;
@@ -61,12 +101,13 @@ a.navLink{
 }
 
 .navLink:hover {
-    color: #000000;
+    color: var(--main-background);
     background: var(--main-decor-color);
+
 }
 
 .active{
-    background: var(--main-decor-color);
+
 }
 
 /*----Burger----*/
@@ -201,8 +242,8 @@ hr {
 }
 ::-webkit-Scrollbar-thumb{
     border-radius: 10px;
-    background: var(--main-decor-color);
-    box-shadow: inset 0 0 20px var(--main-decor-color);
+    background: var(--scrollbar-colour);
+    box-shadow: inset 0 0 20px var(--scrollbar-colour);
 }
 ::-webkit-Scrollbar-track{
     margin-top: 80px;
@@ -246,7 +287,7 @@ hr {
         justify-content:space-evenly;
         background:var(--main-header-background);
         transform:translatex(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.2s ease-in;
         z-index: -1;
     }
     .burger{
@@ -256,6 +297,19 @@ hr {
         display: block;
         cursor:pointer;
         z-index: 5;
+    }
+
+    #swole {
+        letter-spacing: normal;
+        font-family: var(--main-font-family);
+        font-style: normal;
+        font-size: 25px;
+        color: var(--main-fonts-color);
+        text-shadow: 0 0 40px var(--main-decor-color);
+        position: absolute;
+        left: 10px;
+        margin: 5px;
+        padding: 1px 0 0 20px;
     }
     .navbar li{
         opacity:0;
