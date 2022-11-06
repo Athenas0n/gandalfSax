@@ -6,7 +6,7 @@
     --main-background: #0b0c0f;
     --main-fonts-color: #fff;
     --main-decor-color:#00eeff;
-    --main-header-background:#21252e;
+    --main-header-background: rgba(0, 0, 0, 0.53);
     --main-font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
 }
 /*----stuff below header----*/
@@ -20,7 +20,7 @@ main{
 header{
     margin: 0 auto;
     width: 100%;
-    height: 60px;
+    height: 48px;
     display: inline-flex;
     justify-content: space-around;
     background: transparent;
@@ -31,8 +31,17 @@ header{
     font-size: 20px ;
 }
 
+.nav-show{
+    opacity: 0;
+}
+
+header:hover{
+    opacity: 1;
+    background: var(--main-header-background);
+}
+
 /* navigation bar */
-.topHeader{
+.navbar{
     list-style:none;
     position: relative;
     display: inline-flex;
@@ -129,11 +138,34 @@ h3{
     letter-spacing: normal;
     font-family: var(--main-font-family);
     font-style: normal;
-    font-size: 60px;
+    font-size: 50px;
     color: var(--main-fonts-color);
     text-shadow: 0 0 40px var(--main-decor-color);
 }
 
+/*---- Section 2 ----*/
+#section2{
+    margin-top:100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    color: var(--main-fonts-color);
+    font-family: var(--main-font-family)
+}
+#section2 h3{
+    padding-top: 70px;
+}
+#section2 p{
+    font-family: var(--main-font-family);
+    font-size:1.2rem;
+    padding: 10px;
+}
+
+
+/*---- Nav link fading animation ----*/
 @keyframes navLinkFade{
     from{
         opacity:0;
@@ -201,7 +233,7 @@ hr {
     .nav-show{
         opacity: 1;
     }
-    .topHeader{
+    .navbar{
         position:fixed;
         top: 0;
         right:0;
@@ -218,17 +250,17 @@ hr {
     }
     .burger{
         position:absolute;
-        top: 17px;
+        top: 10px;
         right: 25%;
         display: block;
         cursor:pointer;
         z-index: 5;
     }
-    .topHeader li{
+    .navbar li{
         opacity:0;
     }
 }
 
-.navLinkActive{
+.nav-active {
     transform:translatex(0%);
 }
