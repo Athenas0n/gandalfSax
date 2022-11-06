@@ -1,0 +1,14 @@
+:root{
+    --main-background: #0b0c0f;
+    --main-fonts-color: #fff;
+    --main-decor-color:#00eeff;
+    --main-header-background:#21252e;
+    --main-font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+}
+
+main{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-background);
+}
