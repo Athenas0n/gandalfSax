@@ -67,7 +67,7 @@ header:hover{
 }
 
 #swole:hover {
-    color: var(--main-background);
+    color: var(--main-fonts-color);
     text-shadow: 0 0 40px red;
 }
 

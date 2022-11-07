@@ -10,6 +10,12 @@ $(window).on('scroll', function(){
 
 })
 
+
+//audio
+const audioElement = new Audio('/Audio/sax.mp3');
+audioElement.autoplay=true;
+audioElement.loop=true;
+
 //hamburger
 const navSlide = () => {
     const hamburger = document.querySelector(".burger");
@@ -53,6 +59,9 @@ const changeTheme = () => {
             r.style.setProperty('--main-decor-color', 'rgb(0,0,0)');
             b.style.background="url(/Images/macarena.gif) no-repeat";
             b.style.setProperty('opacity', 1);
+            b.style.setProperty('background-size', 'cover');
+            b.style.setProperty('background-position', 'center')
+            audioElement.pause();
             //r.style.setProperty('--main-header-background', 'rgba(255, 255, 255, 0.53)')
         } else if(theme === rs.getPropertyValue('--light-theme')) {
             r.style.setProperty('--theme', rs.getPropertyValue('--dark-theme'));
@@ -64,6 +73,7 @@ const changeTheme = () => {
             b.style.setProperty('background-size', 'cover');
             b.style.setProperty('background-position', 'center')
             r.style.setProperty('--main-header-background', 'rgba(0, 0, 0, 0.53)')
+            audioElement.play();
         } else {
             alert('Theme change error, value of --theme is ' + theme);
         }
