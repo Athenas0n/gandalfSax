@@ -49,6 +49,7 @@ const changeTheme = () => {
     const b = document.querySelector('#section1 .filter');
     const themeButton = document.querySelector(".navbar #bw");
     const wireButton = document.querySelector(".navbar #wire");
+    const title = document.querySelector(".intro #title");
     let rs = getComputedStyle(r);
     themeButton.onclick = () => {
         let theme = rs.getPropertyValue('--theme');
@@ -63,7 +64,8 @@ const changeTheme = () => {
             b.style.setProperty('background-size', 'cover');
             b.style.setProperty('background-position', 'center')
             r.style.setProperty('--main-header-background', 'transparent')
-            wireButton.style.background = "/Images/spark.png";
+            wireButton.src = "/Images/spark.png";
+            title.innerText = "";
             audioElement.pause();
             //r.style.setProperty('--main-header-background', 'rgba(255, 255, 255, 0.53)')
         } else if(theme === rs.getPropertyValue('--light-theme')) {
@@ -76,6 +78,7 @@ const changeTheme = () => {
             b.style.setProperty('background-size', 'cover');
             b.style.setProperty('background-position', 'center')
             r.style.setProperty('--main-header-background', 'rgba(0, 0, 0, 0.53)')
+            wireButton.src = "/Images/sparkW.png";
             audioElement.play();
         } else {
             alert('Theme change error, value of --theme is ' + theme);
