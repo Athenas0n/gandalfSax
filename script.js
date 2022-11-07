@@ -63,7 +63,7 @@ const changeTheme = () => {
             b.style.setProperty('background-size', 'cover');
             b.style.setProperty('background-position', 'center')
             r.style.setProperty('--main-header-background', 'transparent')
-            wireButton.style.opacity = 1;
+            wireButton.style.background = "/Images/spark.png";
             audioElement.pause();
             //r.style.setProperty('--main-header-background', 'rgba(255, 255, 255, 0.53)')
         } else if(theme === rs.getPropertyValue('--light-theme')) {

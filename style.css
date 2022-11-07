@@ -61,7 +61,6 @@ header:hover{
     font-style: normal;
     font-size: 25px;
     color: var(--main-fonts-color);
-    text-shadow: 0 0 40px var(--main-decor-color);
     margin: 5px;
     padding: 1px 5px;
 }
@@ -89,7 +88,6 @@ header:hover{
     width: 30px;
     cursor: pointer;
     padding-left: 30px;
-    opacity: 0;
 }
 
 
@@ -320,7 +318,6 @@ hr {
         font-style: normal;
         font-size: 25px;
         color: var(--main-fonts-color);
-        text-shadow: 0 0 40px var(--main-decor-color);
         position: absolute;
         left: 10px;
         margin: 5px;
