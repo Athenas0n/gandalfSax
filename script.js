@@ -48,6 +48,7 @@ const changeTheme = () => {
     const r = document.querySelector(':root');
     const b = document.querySelector('#section1 .filter');
     const themeButton = document.querySelector(".navbar #bw");
+    const wireButton = document.querySelector(".navbar #wire");
     let rs = getComputedStyle(r);
     themeButton.onclick = () => {
         let theme = rs.getPropertyValue('--theme');
@@ -58,10 +59,11 @@ const changeTheme = () => {
             r.style.setProperty('--main-fonts-color', 'rgb(0,0,0)');
             r.style.setProperty('--main-decor-color', 'rgb(0,0,0)');
             b.style.background="url(/Images/macarena.gif) no-repeat";
-            b.style.setProperty('opacity', 1);
+            b.style.setProperty('opacity', 0.8);
             b.style.setProperty('background-size', 'cover');
             b.style.setProperty('background-position', 'center')
             r.style.setProperty('--main-header-background', 'transparent')
+            wireButton.style.opacity = 1;
             audioElement.pause();
             //r.style.setProperty('--main-header-background', 'rgba(255, 255, 255, 0.53)')
         } else if(theme === rs.getPropertyValue('--light-theme')) {
