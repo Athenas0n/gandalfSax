@@ -1,10 +1,12 @@
 :root {
     --header-neon-horizontal: linear-gradient(to right, rgba(140, 255, 139, 0.4), rgba(139, 255, 193, 0.4), rgba(139, 255, 220, 0.4), rgba(139, 228, 255, 0.4), rgba(139, 211, 255, 0.4) , rgba(151, 139, 255, 0.4), rgba(172, 139, 255, 0.4), rgba(230, 139, 255, 0.4));
     --header-neon-vertical: linear-gradient(rgba(140, 255, 139, 0.4), rgba(139, 255, 193, 0.4), rgba(139, 255, 220, 0.4), rgba(139, 228, 255, 0.4), rgba(139, 211, 255, 0.4) , rgba(151, 139, 255, 0.4), rgba(172, 139, 255, 0.4), rgba(230, 139, 255, 0.4));
-;
     --header-font-decor: rgba(65, 255, 193, 0.87);
     --scrollbar-colour: linear-gradient(red, yellow);
     --main-background: #0b0c0f;
+    --theme: dark;
+    --dark-theme: dark;
+    --light-theme:light;
     --main-fonts-color: #fff;
     --main-decor-color: rgb(255, 255, 255);
     --main-header-background: rgba(0, 0, 0, 0.53);
@@ -30,6 +32,7 @@ main{
 }
 /*----header----*/
 header{
+    border-radius: 0 0 10px 10px;
     margin: 0 auto;
     width: 100%;
     height: 48px;

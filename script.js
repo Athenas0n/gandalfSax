@@ -33,29 +33,55 @@ const navSlide = () => {
     }
 
 }
-
-window.onload = () => navSlide();
-
-
-
-
-
-
 // Dark/Light mode
-const r = document.querySelector(':root');
-
-// Create a function for getting a variable value
-function getRValue() {
-    // Get the styles (properties and values) for the root
-    const rs = getComputedStyle(r);
-    // Alert the value of the --blue variable
-    alert("The value of --main-background is: " + rs.getPropertyValue('--main-background'));
-}
 
 // Create a function for setting a variable value
-function setRValues() {
+const changeTheme = () => {
+    //Retrieve the properties from the root section of style.css
     // Set the value of variable --blue to another value (in this case "lightblue")
-    r.style.setProperty('--main-background', 'lightblue');
+    const r = document.querySelector(':root');
+    const b = document.querySelector('#section1 .filter');
+    const themeButton = document.querySelector(".navbar #bw");
+    let rs = getComputedStyle(r);
+    themeButton.onclick = () => {
+        let theme = rs.getPropertyValue('--theme');
+        //alert("The value of --theme is: " + rs.getPropertyValue('--theme'));
+        if (theme === rs.getPropertyValue('--dark-theme')) {
+            r.style.setProperty('--theme', rs.getPropertyValue('--light-theme'));
+            r.style.setProperty('--main-background', '#fff');
+            r.style.setProperty('--main-fonts-color', 'rgb(0,0,0)');
+            r.style.setProperty('--main-decor-color', 'rgb(0,0,0)');
+            b.style.background="url(/Images/macarena.gif) no-repeat";
+            b.style.setProperty('opacity', 1);
+            //r.style.setProperty('--main-header-background', 'rgba(255, 255, 255, 0.53)')
+        } else if(theme === rs.getPropertyValue('--light-theme')) {
+            r.style.setProperty('--theme', rs.getPropertyValue('--dark-theme'));
+            r.style.setProperty('--main-background', 'rgb(0,0,0)');
+            r.style.setProperty('--main-fonts-color', '#fff');
+            r.style.setProperty('--main-decor-color', '#fff');
+            b.style.background="url(/Images/Gandalf.gif) no-repeat";
+            b.style.setProperty('opacity', .20);
+            b.style.setProperty('background-size', 'cover');
+            b.style.setProperty('background-position', 'center')
+            r.style.setProperty('--main-header-background', 'rgba(0, 0, 0, 0.53)')
+        } else {
+            alert('Theme change error, value of --theme is ' + theme);
+        }
+
+    }
+
 }
+
+window.onload = () => {
+    navSlide()
+    changeTheme();
+}
+
+
+
+
+
+
+
 
 
