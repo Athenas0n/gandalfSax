@@ -61,6 +61,7 @@ const changeTheme = () => {
             b.style.setProperty('opacity', 1);
             b.style.setProperty('background-size', 'cover');
             b.style.setProperty('background-position', 'center')
+            r.style.setProperty('--main-header-background', 'transparent')
             audioElement.pause();
             //r.style.setProperty('--main-header-background', 'rgba(255, 255, 255, 0.53)')
         } else if(theme === rs.getPropertyValue('--light-theme')) {
@@ -69,7 +70,7 @@ const changeTheme = () => {
             r.style.setProperty('--main-fonts-color', '#fff');
             r.style.setProperty('--main-decor-color', '#fff');
             b.style.background="url(/Images/Gandalf.gif) no-repeat";
-            b.style.setProperty('opacity', .20);
+            b.style.setProperty('opacity', 0.8);
             b.style.setProperty('background-size', 'cover');
             b.style.setProperty('background-position', 'center')
             r.style.setProperty('--main-header-background', 'rgba(0, 0, 0, 0.53)')
