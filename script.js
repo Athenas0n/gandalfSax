@@ -11,10 +11,14 @@ $(window).on('scroll', function(){
 })
 
 
-//audio
-const audioElement = new Audio('/Audio/sax.mp3');
-audioElement.autoplay=true;
-audioElement.loop=true;
+//audio-sax
+const sax = new Audio('/Audio/sax.mp3');
+sax.autoplay=true;
+sax.loop=true;
+
+//audio-macarena
+const macarena = new Audio('/Audio/macarena.mp3');
+macarena.loop=true;
 
 //hamburger
 const navSlide = () => {
@@ -62,11 +66,14 @@ const changeTheme = () => {
             b.style.background="url(/Images/macarena.gif) no-repeat";
             b.style.setProperty('opacity', 0.8);
             b.style.setProperty('background-size', 'cover');
-            b.style.setProperty('background-position', 'center')
-            r.style.setProperty('--main-header-background', 'transparent')
+            b.style.setProperty('background-position', 'center');
+            r.style.setProperty('--main-header-background', 'transparent');
+            r.style.setProperty('--scrollbar-colour', '#0b0c0f');
+            r.style.setProperty('--scrollbar-background', '#fff');
             wireButton.src = "/Images/spark.png";
             title.innerText = "";
-            audioElement.pause();
+            sax.pause();
+            macarena.play();
             //r.style.setProperty('--main-header-background', 'rgba(255, 255, 255, 0.53)')
         } else if(theme === rs.getPropertyValue('--light-theme')) {
             r.style.setProperty('--theme', rs.getPropertyValue('--dark-theme'));
@@ -76,10 +83,13 @@ const changeTheme = () => {
             b.style.background="url(/Images/Gandalf.gif) no-repeat";
             b.style.setProperty('opacity', 0.8);
             b.style.setProperty('background-size', 'cover');
-            b.style.setProperty('background-position', 'center')
-            r.style.setProperty('--main-header-background', 'rgba(0, 0, 0, 0.53)')
+            b.style.setProperty('background-position', 'center');
+            r.style.setProperty('--main-header-background', 'rgba(0, 0, 0, 0.53)');
+            r.style.setProperty('--scrollbar-colour', '#fff');
+            r.style.setProperty('--scrollbar-background', 'rgba(5,5,5,1)');
             wireButton.src = "/Images/sparkW.png";
-            audioElement.play();
+            macarena.pause()
+            sax.play();
         } else {
             alert('Theme change error, value of --theme is ' + theme);
         }
@@ -87,6 +97,8 @@ const changeTheme = () => {
     }
 
 }
+
+
 
 window.onload = () => {
     navSlide()
