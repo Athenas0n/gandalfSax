@@ -44,11 +44,8 @@ const navSlide = () => {
 
 }
 // Dark/Light mode
-
 // Create a function for setting a variable value
 const changeTheme = () => {
-    //Retrieve the properties from the root section of style.css
-    // Set the value of variable --blue to another value (in this case "lightblue")
     const r = document.querySelector(':root');
     const b = document.querySelector('#section1 .filter');
     const themeButton = document.querySelector(".navbar #bw");
@@ -98,11 +95,23 @@ const changeTheme = () => {
 
 }
 
+const disco = () => {
+    const r = document.querySelector(':root');
+    let rs = getComputedStyle(r);
+    const wireButton = document.querySelector(".navbar #wire");
+    wireButton.onclick = () => {
+        if (rs.getPropertyValue('--disco-bool') === (rs.getPropertyValue('--disco-no'))) {
+            r.style.setProperty('--main-fonts-color', 'red');
+        }
+    }
+}
+
 
 
 window.onload = () => {
     navSlide()
     changeTheme();
+    disco();
 }
 
 

@@ -8,6 +8,9 @@
     --theme: dark;
     --dark-theme: dark;
     --light-theme:light;
+    --disco-yes: true;
+    --disco-no: false;
+    --disco-bool: false;
     --main-fonts-color: #fff;
     --main-decor-color: rgb(255, 255, 255);
     --main-header-background: rgba(0, 0, 0, 1);
@@ -57,6 +60,10 @@ header:hover{
 }
 
 #swole {
+    text-decoration: none;
+}
+
+#swole h2{
     letter-spacing: normal;
     font-family: var(--main-font-family);
     font-style: normal;
@@ -68,7 +75,7 @@ header:hover{
 
 #swole:hover {
     color: var(--main-fonts-color);
-    text-shadow: 0 0 40px red;
+    text-shadow: 0 0 40px var(--main-fonts-color);
 }
 
 /* navigation bar */
